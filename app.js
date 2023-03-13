@@ -43,6 +43,7 @@ app.get('/',function(req,res){
 })
 
 app.post('/createUser',userController.createUser);
+app.get('/activateUser/:email',userController.activateUser);
 app.post('/login',userController.login);
 app.post('/createBlog',auth, blogController.createBlog);
 app.get('/getAllBlogs',blogController.getAllBlogs);

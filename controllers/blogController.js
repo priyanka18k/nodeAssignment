@@ -83,7 +83,6 @@ exports.deleteBlog = async function(req, res,next){
 }
 
 exports.updateBlog = async function(req, res,next){
-    blogModel.findByIdAndUpdate()
     const filter = { _id: req.body.blogId };
     const update = { title: req.body.title,
     body : req.body.body };
