@@ -12,7 +12,8 @@ const blogSchema = new mongoose.Schema({
     image : {
         type :String,
         required : true
-    }
+    },
+    userId : [{ type: mongoose.Schema.Types.ObjectId, ref: 'userSchema' }]
 });
 
 module.exports = mongoose.model('blogSchema',blogSchema);
